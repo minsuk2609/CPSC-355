@@ -1,0 +1,389 @@
+Script started on 2022-09-21 18:30:17-06:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="282" LINES="68"]
+]0;minsu.kim1@csa3:~[?2004hminsu.kim1@csa3:~$ gdb assign1a.o
+[?2004l[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32massign1a.o[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004lDebuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32massign1a.o[m)
+[?2004h(gdb) brealk[K[Kk * main
+[?2004lBreakpoint 1 at [34m0x400698[m
+[?2004h(gdb) display [K/i $pc
+[?2004l1: x/i $pc
+[2m<error: [m[2mNo registers.[m[2m>[m
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/ugd/minsu.kim1/assign1a.o[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+
+Breakpoint 1, [34m0x0000000000400698[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x400698[m <[33mmain[m>:	stp	x29, x30, [sp, #-16]!
+[?2004h[?2004l[?2004h(gdb) display [K/i $pc
+[?2004l2: x/i $pc
+=> [34m0x400698[m <[33mmain[m>:	stp	x29, x30, [sp, #-16]!
+[?2004h(gdb) display x[K[K[K[K[K[K[K[K[Kni
+[?2004l[34m0x000000000040069c[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x40069c[m <[33mmain[m+4>:	mov	x29, sp
+2: x/i $pc
+=> [34m0x40069c[m <[33mmain[m+4>:	mov	x29, sp
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006a0[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x4006a0[m <[33mmain[m+8>:	mov	x19, #0xfffffffffffffff6    	// #-10
+2: x/i $pc
+=> [34m0x4006a0[m <[33mmain[m+8>:	mov	x19, #0xfffffffffffffff6    	// #-10
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006a4[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x4006a4[m <[33mmain[m+12>:	mov	x20, #0x0                   	// #0
+2: x/i $pc
+=> [34m0x4006a4[m <[33mmain[m+12>:	mov	x20, #0x0                   	// #0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006a8[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x4006a8[m <[33mmain[m+16>:	mov	x21, #0x0                   	// #0
+2: x/i $pc
+=> [34m0x4006a8[m <[33mmain[m+16>:	mov	x21, #0x0                   	// #0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006ac[m in [33mmain[m ()
+1: x/i $pc
+=> [34m0x4006ac[m <[33mmain[m+20>:	b	[34m0x4006b0[m <[33mloopTest[m>
+2: x/i $pc
+=> [34m0x4006ac[m <[33mmain[m+20>:	b	[34m0x4006b0[m <[33mloopTest[m>
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006b0[m in [33mloopTest[m ()
+1: x/i $pc
+=> [34m0x4006b0[m <[33mloopTest[m>:	cmp	x19, #0xb
+2: x/i $pc
+=> [34m0x4006b0[m <[33mloopTest[m>:	cmp	x19, #0xb
+[?2004h[?2004l[?2004h(gdb) ni[Kdisplay x19
+[?2004lNo symbol "x19" in current context.
+[?2004h(gdb) display $x19
+[?2004l3: $x19 = -10
+[?2004h(gdb) display $x19[C[C[C[C[C[C[Kni
+[?2004l[34m0x00000000004006b4[m in [33mloopTest[m ()
+1: x/i $pc
+=> [34m0x4006b4[m <[33mloopTest[m+4>:	b.lt	[34m0x4006bc[m <[33mloopBody[m>  // b.tstop
+2: x/i $pc
+=> [34m0x4006b4[m <[33mloopTest[m+4>:	b.lt	[34m0x4006bc[m <[33mloopBody[m>  // b.tstop
+3: $x19 = -10
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006bc[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006bc[m <[33mloopBody[m>:	mov	x26, #0xfffffffffffffffc    	// #-4
+2: x/i $pc
+=> [34m0x4006bc[m <[33mloopBody[m>:	mov	x26, #0xfffffffffffffffc    	// #-4
+3: $x19 = -10
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006c0[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006c0[m <[33mloopBody[m+4>:	mul	x22, x19, x19
+2: x/i $pc
+=> [34m0x4006c0[m <[33mloopBody[m+4>:	mul	x22, x19, x19
+3: $x19 = -10
+[?2004h[?2004l[?2004h(gdb) display %[K$x22
+[?2004l4: $x22 = 4195764
+[?2004h(gdb) display $x22[C[C[C[C[C[Cni[K
+[?2004l[34m0x00000000004006c4[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006c4[m <[33mloopBody[m+8>:	mul	x22, x22, x19
+2: x/i $pc
+=> [34m0x4006c4[m <[33mloopBody[m+8>:	mul	x22, x22, x19
+3: $x19 = -10
+4: $x22 = 100
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006c8[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006c8[m <[33mloopBody[m+12>:	mul	x22, x22, x19
+2: x/i $pc
+=> [34m0x4006c8[m <[33mloopBody[m+12>:	mul	x22, x22, x19
+3: $x19 = -10
+4: $x22 = -1000
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006cc[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006cc[m <[33mloopBody[m+16>:	mul	x22, x22, x26
+2: x/i $pc
+=> [34m0x4006cc[m <[33mloopBody[m+16>:	mul	x22, x22, x26
+3: $x19 = -10
+4: $x22 = 10000
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006d0[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006d0[m <[33mloopBody[m+20>:	mov	x26, #0x12d                 	// #301
+2: x/i $pc
+=> [34m0x4006d0[m <[33mloopBody[m+20>:	mov	x26, #0x12d                 	// #301
+3: $x19 = -10
+4: $x22 = -40000
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006d4[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006d4[m <[33mloopBody[m+24>:	mul	x23, x19, x19
+2: x/i $pc
+=> [34m0x4006d4[m <[33mloopBody[m+24>:	mul	x23, x19, x19
+3: $x19 = -10
+4: $x22 = -40000
+[?2004h[?2004l[?2004h(gdb) ni[Kdisplay x$[K[K$x23
+[?2004l5: $x23 = 281474976707160
+[?2004h(gdb) display $x23[C[C[C[C[C[Cni[K
+[?2004l[34m0x00000000004006d8[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006d8[m <[33mloopBody[m+28>:	mul	x23, x23, x26
+2: x/i $pc
+=> [34m0x4006d8[m <[33mloopBody[m+28>:	mul	x23, x23, x26
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 100
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006dc[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006dc[m <[33mloopBody[m+32>:	mov	x26, #0x38                  	// #56
+2: x/i $pc
+=> [34m0x4006dc[m <[33mloopBody[m+32>:	mov	x26, #0x38                  	// #56
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006e0[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006e0[m <[33mloopBody[m+36>:	mul	x24, x19, x26
+2: x/i $pc
+=> [34m0x4006e0[m <[33mloopBody[m+36>:	mul	x24, x19, x26
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006e4[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006e4[m <[33mloopBody[m+40>:	mov	x26, #0xffffffffffffff99    	// #-103
+2: x/i $pc
+=> [34m0x4006e4[m <[33mloopBody[m+40>:	mov	x26, #0xffffffffffffff99    	// #-103
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+[?2004h[?2004l[?2004h(gdb) display $x24
+[?2004l6: $x24 = -560
+[?2004h(gdb) ni
+[?2004l[34m0x00000000004006e8[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006e8[m <[33mloopBody[m+44>:	add	x25, x22, x23
+2: x/i $pc
+=> [34m0x4006e8[m <[33mloopBody[m+44>:	add	x25, x22, x23
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006ec[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006ec[m <[33mloopBody[m+48>:	add	x25, x25, x24
+2: x/i $pc
+=> [34m0x4006ec[m <[33mloopBody[m+48>:	add	x25, x25, x24
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+[?2004h[?2004l[?2004h(gdb) ni[Kdisplay $x25
+[?2004l7: $x25 = -9900
+[?2004h(gdb) display $x25[C[C[C[C[C[Cni[K
+[?2004l[34m0x00000000004006f0[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006f0[m <[33mloopBody[m+52>:	add	x25, x25, x26
+2: x/i $pc
+=> [34m0x4006f0[m <[33mloopBody[m+52>:	add	x25, x25, x26
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10460
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006f4[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006f4[m <[33mloopBody[m+56>:	cmp	x25, x21
+2: x/i $pc
+=> [34m0x4006f4[m <[33mloopBody[m+56>:	cmp	x25, x21
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004006f8[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006f8[m <[33mloopBody[m+60>:	b.gt	[34m0x400700[m <[33mnewMax[m>
+2: x/i $pc
+=> [34m0x4006f8[m <[33mloopBody[m+60>:	b.gt	[34m0x400700[m <[33mnewMax[m>
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+[?2004h[?2004l[?2004h(gdb) display x$[K[K%[K$x21
+[?2004l8: $x21 = 0
+[?2004h(gdb) display $x21
+[?2004l9: $x21 = 0
+[?2004h(gdb) display $x21[C[C[C[C[C[C[Kdisplay $x21[C[C[C[C[C[Cni[K
+[?2004l[34m0x00000000004006fc[m in [33mloopBody[m ()
+1: x/i $pc
+=> [34m0x4006fc[m <[33mloopBody[m+64>:	b	[34m0x400708[m <[33mprint[m>
+2: x/i $pc
+=> [34m0x4006fc[m <[33mloopBody[m+64>:	b	[34m0x400708[m <[33mprint[m>
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400708[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400708[m <[33mprint[m>:	adrp	x0, [34m0x420000[m <[33m__libc_start_main@got.plt[m>
+2: x/i $pc
+=> [34m0x400708[m <[33mprint[m>:	adrp	x0, [34m0x420000[m <[33m__libc_start_main@got.plt[m>
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x000000000040070c[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x40070c[m <[33mprint[m+4>:	add	x0, x0, #0x24
+2: x/i $pc
+=> [34m0x40070c[m <[33mprint[m+4>:	add	x0, x0, #0x24
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400710[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400710[m <[33mprint[m+8>:	mov	x1, x19
+2: x/i $pc
+=> [34m0x400710[m <[33mprint[m+8>:	mov	x1, x19
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400714[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400714[m <[33mprint[m+12>:	mov	x2, x25
+2: x/i $pc
+=> [34m0x400714[m <[33mprint[m+12>:	mov	x2, x25
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400718[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400718[m <[33mprint[m+16>:	mov	x3, x21
+2: x/i $pc
+=> [34m0x400718[m <[33mprint[m+16>:	mov	x3, x21
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x000000000040071c[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x40071c[m <[33mprint[m+20>:	bl	[34m0x400540[m <[33mprintf@plt[m>
+2: x/i $pc
+=> [34m0x40071c[m <[33mprint[m+20>:	bl	[34m0x400540[m <[33mprintf@plt[m>
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004lThe current value of x: -10
+ The current value of y: -10563
+ The current maximum value: 0
+[34m0x0000000000400720[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400720[m <[33mprint[m+24>:	add	x19, x19, #0x1
+2: x/i $pc
+=> [34m0x400720[m <[33mprint[m+24>:	add	x19, x19, #0x1
+3: $x19 = -10
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400724[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400724[m <[33mprint[m+28>:	b	[34m0x4006b0[m <[33mloopTest[m>
+2: x/i $pc
+=> [34m0x400724[m <[33mprint[m+28>:	b	[34m0x4006b0[m <[33mloopTest[m>
+3: $x19 = -9
+4: $x22 = -40000
+5: $x23 = 30100
+6: $x24 = -560
+7: $x25 = -10563
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004lThe current value of x: -9
+ The current value of y: -2470
+ The current maximum value: 0
+[34m0x0000000000400720[m in [33mprint[m ()
+1: x/i $pc
+=> [34m0x400720[m <[33mprint[m+24>:	add	x19, x19, #0x1
+2: x/i $pc
+=> [34m0x400720[m <[33mprint[m+24>:	add	x19, x19, #0x1
+3: $x19 = -9
+4: $x22 = -26244
+5: $x23 = 24381
+6: $x24 = -504
+7: $x25 = -2470
+8: $x21 = 0
+9: $x21 = 0
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1490501] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l]0;minsu.kim1@csa3:~[?2004hminsu.kim1@csa3:~$ exit
+[?2004lexit
+
+Script done on 2022-09-21 18:33:24-06:00 [COMMAND_EXIT_CODE="0"]
