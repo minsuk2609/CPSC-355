@@ -1,0 +1,626 @@
+Script started on 2022-10-19 23:25:48-06:00 [TERM="xterm-256color" TTY="/dev/pts/46" COLUMNS="282" LINES="68"]
+]0;minsu.kim1@csa2:~[?2004hminsu.kim1@csa2:~$ gdb test
+[?2004l[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mtest[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004lDebuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32mtest[m)
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/ugd/minsu.kim1/test[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+v[0]: 103
+v[1]: 198
+v[2]: 105
+v[3]: 115
+v[4]: 81
+v[5]: 255
+v[6]: 74
+v[7]: 236
+v[8]: 41
+v[9]: 205
+v[10]: 186
+v[11]: 171
+v[12]: 242
+v[13]: 251
+v[14]: 227
+v[15]: 70
+v[16]: 124
+v[17]: 194
+v[18]: 84
+v[19]: 248
+v[20]: 27
+v[21]: 232
+v[22]: 231
+v[23]: 141
+v[24]: 118
+v[25]: 90
+v[26]: 46
+v[27]: 99
+v[28]: 51
+v[29]: 159
+v[30]: 201
+v[31]: 154
+v[32]: 102
+v[33]: 50
+v[34]: 13
+v[35]: 183
+v[36]: 49
+v[37]: 88
+v[38]: 163
+v[39]: 90
+
+Sorted Array:
+v[0]: 13
+v[1]: 27
+v[2]: 41
+v[3]: 46
+v[4]: 49
+v[5]: 50
+v[6]: 51
+v[7]: 70
+v[8]: 74
+v[9]: 81
+v[10]: 84
+v[11]: 88
+v[12]: 90
+v[13]: 90
+v[14]: 99
+v[15]: 102
+v[16]: 103
+v[17]: 105
+v[18]: 115
+v[19]: 118
+v[20]: 124
+v[21]: 141
+v[22]: 154
+v[23]: 159
+v[24]: 163
+v[25]: 171
+v[26]: 183
+v[27]: 186
+v[28]: 194
+v[29]: 198
+v[30]: 201
+v[31]: 205
+v[32]: 227
+v[33]: 231
+v[34]: 232
+v[35]: 236
+v[36]: 242
+v[37]: 248
+v[38]: 251
+v[39]: 255
+[Inferior 1 (process 4019851) exited with code 013]
+[?2004h[?2004l[?2004h(gdb) b mian[K[K[K[Kmain[K[K[K[Kmain
+[?2004lBreakpoint 1 at [34m0x400700[m
+[?2004h(gdb) b printS[KUnsorted[K[K
+[?2004lBreakpoint 2 at [34m0x400738[m
+[?2004h(gdb) b printSorted
+[?2004lBreakpoint 3 at [34m0x4007e0[m
+[?2004h(gdb) r
+[?2004lStarting program: [32m/home/ugd/minsu.kim1/test[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+
+Breakpoint 1, [34m0x0000000000400700[m in [33mmain[m ()
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+[?2004h[?2004l[?2004h(gdb) display/i $pc
+[?2004l1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h(gdb) ni
+[?2004l[34m0x000000000040073c[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x40073c[m <[33mprintUnsort[m+4>:	ldr	w24, [x19, w21, sxtw #2]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400740[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400740[m <[33mprintUnsort[m+8>:	adrp	x0, [34m0x400000[m
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400744[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400744[m <[33mprintUnsort[m+12>:	add	x0, x0, #0x6d8
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400748[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400748[m <[33mprintUnsort[m+16>:	mov	w1, w21
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x000000000040074c[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x40074c[m <[33mprintUnsort[m+20>:	mov	w2, w24
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400750[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400750[m <[33mprintUnsort[m+24>:	bl	[34m0x400590[m <[33mprintf@plt[m>
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004lv[0]: 103
+[34m0x0000000000400754[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400754[m <[33mprintUnsort[m+28>:	add	w21, w21, #0x1
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400758[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400758[m <[33mprintUnsort[m+32>:	str	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[1]: 198
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[2]: 105
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[3]: 115
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[4]: 81
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[5]: 255
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[6]: 74
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[7]: 236
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[8]: 41
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[9]: 205
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[10]: 186
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[11]: 171
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[12]: 242
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[13]: 251
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[14]: 227
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[15]: 70
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[16]: 124
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[17]: 194
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[18]: 84
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[19]: 248
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[20]: 27
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[21]: 232
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[22]: 231
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[23]: 141
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[24]: 118
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[25]: 90
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[26]: 46
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[27]: 99
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[28]: 51
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[29]: 159
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[30]: 201
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[31]: 154
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[32]: 102
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[33]: 50
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[34]: 13
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[35]: 183
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[36]: 49
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[37]: 88
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[38]: 163
+
+Breakpoint 2, [34m0x0000000000400738[m in [33mprintUnsort[m ()
+1: x/i $pc
+=> [34m0x400738[m <[33mprintUnsort[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[39]: 90
+
+Sorted Array:
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[0]: 13
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[1]: 27
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[2]: 41
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[3]: 46
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[4]: 49
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[5]: 50
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[6]: 51
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[7]: 70
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[8]: 74
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[9]: 81
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[10]: 84
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[11]: 88
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[12]: 90
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[13]: 90
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[14]: 99
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[15]: 102
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[16]: 103
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c
+[?2004lContinuing.
+v[17]: 105
+
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) c[Kni
+[?2004l[34m0x00000000004007e4[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e4[m <[33mprintSorted[m+4>:	ldr	w24, [x19, w21, sxtw #2]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007e8[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e8[m <[33mprintSorted[m+8>:	adrp	x0, [34m0x400000[m
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007ec[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007ec[m <[33mprintSorted[m+12>:	add	x0, x0, #0x6d8
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007f0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007f0[m <[33mprintSorted[m+16>:	mov	w1, w21
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007f4[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007f4[m <[33mprintSorted[m+20>:	mov	w2, w24
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007f8[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007f8[m <[33mprintSorted[m+24>:	bl	[34m0x400590[m <[33mprintf@plt[m>
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004lv[18]: 115
+[34m0x00000000004007fc[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007fc[m <[33mprintSorted[m+28>:	add	w21, w21, #0x1
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x0000000000400800[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x400800[m <[33mprintSorted[m+32>:	str	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l
+Breakpoint 3, [34m0x00000000004007e0[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e0[m <[33mprintSorted[m>:	ldr	w21, [x29, #16]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007e4[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e4[m <[33mprintSorted[m+4>:	ldr	w24, [x19, w21, sxtw #2]
+[?2004h[?2004l[?2004h(gdb) ni
+[?2004l[34m0x00000000004007e8[m in [33mprintSorted[m ()
+1: x/i $pc
+=> [34m0x4007e8[m <[33mprintSorted[m+8>:	adrp	x0, [34m0x400000[m
+[?2004h[?2004l[?2004h(gdb) q
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 4019859] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l]0;minsu.kim1@csa2:~[?2004hminsu.kim1@csa2:~$ exit
+[?2004lexit
+
+Script done on 2022-10-19 23:27:01-06:00 [COMMAND_EXIT_CODE="0"]
